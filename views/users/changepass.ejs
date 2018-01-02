@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CHANGE PASS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	
+</head>
+
+<body>
+	
+	<%include partials/header%>
+
+	<div class="container-fluid main-body" style="margin-top: 50px">
+		<div style="padding: 50px 0 20px 0">
+			<div class="row">
+				
+				<%include partials/nav%>
+				
+				<div class="col-md-9 col-sm-9 col-lg-9  ">
+					<div class="card">
+						<div class="card-header">
+							<h3>CHANGE PASS</h3>
+						</div>
+						<div class="card-body chat-body" style="height: 400px; overflow: hidden">
+							
+							<div style="width: 103%;height:100%;overflow-x: hidden;overflow-y: scroll; padding: 5% 10% 0 10%" >
+
+								<form method="post" autocomplete="off">
+
+									<label for="PreviousPassword">Previous Password:</label>
+									<input type="password" name="PreviousPassword" placeholder="Previous Password" id="PreviousPassword" class="form-control">
+									<span style="color: red" id="PreviousPasswordError"><%= PreviousPasswordError%></span><br>
+
+									<label for="NewPassword">New Password:</label>
+									<input type="password" name="NewPassword" placeholder="New Password" id="NewPassword" class="form-control">
+									<span style="color: red" id="NewPasswordError"><%= NewPasswordError%></span><br>
+
+									<label for="ConfirmNewPassword">Confirm New Password:</label>
+									<input type="password" name="ConfirmNewPassword" placeholder="Confirm New Password" id="ConfirmNewPassword" class="form-control">
+									<span style="color: red" id="ConfirmNewPasswordError"><%= ConfirmNewPasswordError%></span><br>
+
+									<div style="text-align: center;margin-top: 20px">
+										<div>
+										<span style="color: green">
+											<%= confirmation%>
+										</span>
+										</div>
+										<input type="submit" class="btn btn-success" value="CHANGE">
+									</div>
+								</form>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/changepass.js"></script>
+
+</html>

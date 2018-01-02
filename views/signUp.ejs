@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SIGN UP</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	
+</head>
+<body>
+
+	<div class="container-fluid black" style="background-color: #000;color: #fff;">
+		<h1>MY CHAT</h1>
+	</div>
+	
+	<div class="main-body">
+		<div class="container" style="padding: 70px 0 20px 0; margin-top: -10px">
+		
+			<div class="card" >
+				<div class="card-header"><h3>SIGN UP</h3></div>
+
+				<div class="card-body chat-body" style="padding: 10px">
+					<form method="post" autocomplete="off">
+					<label for="userName">USER NAME:</label>
+					<input type="text" name="userName" placeholder="USER NAME" value="<%= userName%>" id="userName" class="form-control">
+					<span style="color: red" id="userNameError"><%= userNameError%></span><br>
+					
+					<label for="password">PASSWORD:</label>
+					<input type="password" name="password" placeholder="PASSWORD" id="password" class="form-control">
+					<span style="color: red" id="passwordError"><%= passwordError%></span><br>
+
+					<label for="confirmPass">CONFIRM PASS:</label>
+					<input type="password" name="confirmPass" placeholder="CONFIRM PASS" id="confirmPass" class="form-control">
+					<span style="color: red" id="confirmPassError"><%= confirmPassError%></span>
+
+					<div style="text-align: center;margin-top: 20px">
+						<input type="submit" class="btn btn-success" value="SIGN UP">
+					</div>
+					</form>
+				</div>
+
+				<div class="card-footer">
+					<a href="/">Log In?</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/signup.js"></script>
+
+</html>
+
+
+
+
+	
+

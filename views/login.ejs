@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOG IN</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	
+</head>
+<body>
+
+	<div class="container-fluid black" style="background-color: #000;color: #fff;">
+		<h1>MY CHAT</h1>
+	</div>
+
+
+	<div class=" main-body">
+		<div class="container" style="padding: 80px 0 80px 0; margin-top: -10px">
+				
+			<div class="card">
+				<div class="card-header"><h3>LOG IN</h3></div>
+
+				<div class="card-body chat-body" style="padding: 10px">
+					<form method="post" autocomplete="off">
+					<label for="userName">USER NAME:</label>
+					<input type="text" name="userName" placeholder="USER NAME" value="" class="form-control">
+					<span style="color: red"></span><br>
+					
+					<label for="password">PASSWORD:</label>
+					<input type="password" name="password" placeholder="PASSWORD" value="" class="form-control">
+					<span style="color: red"></span>
+
+					<div style="text-align: center;margin-top: 20px">
+						<span style="color: red"><%=error%></span><br>
+						<input type="submit" class="btn btn-success" value="Log In">
+					</div>
+					</form>
+				</div>
+
+				<div class="card-footer">
+					<a href="/signup">Don't have account?</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+
+

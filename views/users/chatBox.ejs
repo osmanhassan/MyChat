@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CHAT BOX</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+	
+</head>
+
+<body>
+	
+	<%include partials/header%>
+
+	<div class="container-fluid main-body" style="margin-top: 50px">
+		<div style="padding: 50px 0 20px 0">
+			<div class="row">
+				
+				<%include partials/nav%>
+				
+				<div class="col-md-9 col-sm-9 col-lg-9  ">
+					<div class="card">
+						<div class="card-header" style="font-weight: bolder;">
+
+
+							<% 
+								var activity = friend[0].activity;
+								var last = 0;
+								var staus = 0;
+								if(activity == 'online')
+									var src = '/images/green_round_btn.PNG';
+								else
+									var src = '/images/red_round_btn.PNG';
+							%>
+							<div style="width: 60px; height: 60px; border-radius: 50%; border: solid gray;float: left;">
+							<img src="<%= friend[0].image%>" style="width: 50px; height: 50px; border-radius: 50%;padding:1px; margin: 2px 0 0 1.5px ; ">
+							</div>
+							<img src="<%=src%>" style="width: 20px;height: 20px;border-radius: 50%; margin-left: -15px;float: left;">
+							
+							<span style="line-height: 60px "><%= friend[0].name%></span>
+							
+							<input type="hidden" id="receiverName" value="<%= friend[0].name%>">
+
+							<button id="deleteAll" class="mybtn" style="width: 150px;background-image: url('/images/red_btn.PNG');float: right;">
+								DELETE ALL
+							</button>
+
+						</div>
+
+						<div class="card-body chat-body" style="height: 400px; overflow: hidden">
+							
+							<div id="chats" style="width: 103%;height:100%;overflow-x: hidden;overflow-y: scroll; padding: 5% 5% 0 5%;color: #000" >
+								<div id="chatBox">
+								<%for(chat in chats){
+									var sender = chats[chat].sender;
+									var c = chats[chat].description;
+									status = chats[chat].status;
+									var type = chats[chat].type;
+									var mid = chats[chat].mid;
+								%>
+								<%if(type == 'txt'){%>
+									<%if(sender == myId){
+										last = 1;%>
+										<div class ="mybox" id="mb<%=mid%>">
+											<div class="receiver" >
+												<%for(var i=0; i< c.length; i++){
+
+													if(c[i]==='\n'){%>
+
+													<br>
+													
+
+													<%}else{
+														var p = "";
+													%>
+													<%while(i< c.length){
+														if(c[i+1]=='\n' || c[i+1] ==' ')
+														{
+														p += c[i];
+														break;
+													}
+														else 
+														p += c[i];
+														i++;
+													}%>
+													<%= p%>
+												<%}
+												
+												} 
+												%>
+												
+											</div>
+											<span class="deletebtnr" id="<%=mid%>" name="delete">DELETE</span>
+										</div>
+									<%}%>
+									<%if(sender != myId){
+										last = 0;%>
+										<div class ="mybox" id="mb<%=mid%>">
+											<div class="sender">
+												<%for(var i=0; i< c.length; i++){
+
+													if(c[i]==='\n'){%>
+
+													<br>
+
+													<%}else{
+														var p = "";
+													%>
+													<%while(i< c.length){
+														if(c[i+1]=='\n' || c[i+1] ==' '){
+														p += c[i];
+														break;
+														}					
+														else 
+														p += c[i];
+														i++;
+													}%>
+													<%= p%>
+												<%}
+												
+												} 
+												%>
+
+											</div>
+											<span class="deletebtnl" id="<%=mid%>" name="delete">DELETE</span>
+										</div>
+										
+									<%}%>
+								<%}else{%>
+									<%if(sender == myId){last = 1;%>
+										<div class ="mybox" id="mb<%=mid%>">
+											<img src="<%=c%>" class="senderimage">
+											<span class="deletebtnr" id="<%=mid%>" name="delete">DELETE</span>
+										</div>
+									<%}else{last = 0;%>
+										<div class ="mybox" id="mb<%=mid%>">
+											<img src="<%=c%>" class="receiverimage">
+											<span class="deletebtnl" id="<%=mid%>" name="delete">DELETE</apan>
+										</div>
+									<%}%>
+								<%}%>
+								<%}%>
+								</div>
+								<div id="seenBox" style="text-align: right;color: #fff;padding: 20px;clear: both;">
+									<%if(last == 1 && status == 'seen'){%>
+										<%=status%>
+									<%}%>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="card-footer">
+
+							<div style="width: 288px;height: 90px;overflow: hidden;float: left;border: solid black;background-color: green">
+
+								<textarea id ="message" style="width: 300px;padding: 20px;resize: none;margin: 0;overflow-x: hidden; overflow-y: auto;">
+								</textarea>
+								<input id="friendId" type="hidden" value="<%=friendId%>" name="">
+
+							</div>
+							
+							<img id="send_btn" src="/images/right_arrow.png" style="width: 50px;height: 110px; //float: right;margin: -10px 0 0 -15px;cursor: pointer;">
+
+							<label style="float: right;cursor: pointer;margin-right: 20px;">
+								<img src="/images/cameral.png" style="width:70px;height:70px;margin-top:20px;"/>
+								<input class = "pic" type="file" style="display:none"/>
+							</label>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+<script type="text/javascript" src="/js/chatBox.js" ></script>
+<script type="text/javascript" src="/js/notification.js"></script>
+
+</html>

@@ -1,0 +1,568 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'i',
+1 verbose cli   'wait.for',
+1 verbose cli   '--save' ]
+2 info using npm@2.15.11
+3 info using node@v4.8.4
+4 verbose install initial load of C:\Users\Antu dell\Desktop\node js project\package.json
+5 warn package.json node@1.0.0 No description
+6 warn package.json node@1.0.0 No repository field.
+7 warn package.json node@1.0.0 No README data
+8 warn package.json node@1.0.0 No license field.
+9 verbose installManyTop reading scoped package data from C:\Users\Antu dell\Desktop\node js project\node_modules\body-parser\package.json
+10 verbose installManyTop reading scoped package data from C:\Users\Antu dell\Desktop\node js project\node_modules\bootstrap\package.json
+11 verbose installManyTop reading scoped package data from C:\Users\Antu dell\Desktop\node js project\node_modules\ejs\package.json
+12 verbose installManyTop reading scoped package data from C:\Users\Antu dell\Desktop\node js project\node_modules\express\package.json
+13 verbose installManyTop reading scoped package data from C:\Users\Antu dell\Desktop\node js project\node_modules\express-session\package.json
+14 verbose installManyTop reading scoped package data from C:\Users\Antu dell\Desktop\node js project\node_modules\jquery\package.json
+15 verbose installManyTop reading scoped package data from C:\Users\Antu dell\Desktop\node js project\node_modules\mysql\package.json
+16 verbose installManyTop reading scoped package data from C:\Users\Antu dell\Desktop\node js project\node_modules\node-input-validator\package.json
+17 verbose readDependencies loading dependencies from C:\Users\Antu dell\Desktop\node js project\package.json
+18 silly cache add args [ 'wait.for@^0.6.6', null ]
+19 verbose cache add spec wait.for@^0.6.6
+20 silly cache add parsed spec Result {
+20 silly cache add   raw: 'wait.for@^0.6.6',
+20 silly cache add   scope: null,
+20 silly cache add   name: 'wait.for',
+20 silly cache add   rawSpec: '^0.6.6',
+20 silly cache add   spec: '>=0.6.6 <0.7.0',
+20 silly cache add   type: 'range' }
+21 silly addNamed wait.for@>=0.6.6 <0.7.0
+22 verbose addNamed ">=0.6.6 <0.7.0" is a valid semver range for wait.for
+23 silly addNameRange { name: 'wait.for', range: '>=0.6.6 <0.7.0', hasData: false }
+24 silly mapToRegistry name wait.for
+25 silly mapToRegistry using default registry
+26 silly mapToRegistry registry https://registry.npmjs.org/
+27 silly mapToRegistry data Result {
+27 silly mapToRegistry   raw: 'wait.for',
+27 silly mapToRegistry   scope: null,
+27 silly mapToRegistry   name: 'wait.for',
+27 silly mapToRegistry   rawSpec: '',
+27 silly mapToRegistry   spec: 'latest',
+27 silly mapToRegistry   type: 'tag' }
+28 silly mapToRegistry uri https://registry.npmjs.org/wait.for
+29 verbose addNameRange registry:https://registry.npmjs.org/wait.for not in flight; fetching
+30 verbose request uri https://registry.npmjs.org/wait.for
+31 verbose request no auth needed
+32 info attempt registry request try #1 at 4:56:25 AM
+33 verbose request id 6bc60f2b06fc5394
+34 http request GET https://registry.npmjs.org/wait.for
+35 http 200 https://registry.npmjs.org/wait.for
+36 verbose headers { 'content-type': 'application/json; charset=UTF-8',
+36 verbose headers   server: 'UploadServer',
+36 verbose headers   'cache-control': 'max-age=300',
+36 verbose headers   'last-modified': 'Mon, 17 Jul 2017 3:10:26 GMT',
+36 verbose headers   etag: '"596c2aa2-4433"',
+36 verbose headers   'content-encoding': 'gzip',
+36 verbose headers   'content-length': '4533',
+36 verbose headers   'accept-ranges': 'bytes',
+36 verbose headers   date: 'Fri, 22 Dec 2017 22:56:28 GMT',
+36 verbose headers   via: '1.1 varnish',
+36 verbose headers   age: '11916',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-served-by': 'cache-lcy19249-LCY',
+36 verbose headers   'x-cache': 'HIT',
+36 verbose headers   'x-cache-hits': '1',
+36 verbose headers   'x-timer': 'S1513983388.064513,VS0,VE0',
+36 verbose headers   vary: 'Accept-Encoding, Accept' }
+37 silly get cb [ 200,
+37 silly get   { 'content-type': 'application/json; charset=UTF-8',
+37 silly get     server: 'UploadServer',
+37 silly get     'cache-control': 'max-age=300',
+37 silly get     'last-modified': 'Mon, 17 Jul 2017 3:10:26 GMT',
+37 silly get     etag: '"596c2aa2-4433"',
+37 silly get     'content-encoding': 'gzip',
+37 silly get     'content-length': '4533',
+37 silly get     'accept-ranges': 'bytes',
+37 silly get     date: 'Fri, 22 Dec 2017 22:56:28 GMT',
+37 silly get     via: '1.1 varnish',
+37 silly get     age: '11916',
+37 silly get     connection: 'keep-alive',
+37 silly get     'x-served-by': 'cache-lcy19249-LCY',
+37 silly get     'x-cache': 'HIT',
+37 silly get     'x-cache-hits': '1',
+37 silly get     'x-timer': 'S1513983388.064513,VS0,VE0',
+37 silly get     vary: 'Accept-Encoding, Accept' } ]
+38 verbose get saving wait.for to C:\Users\Antu dell\AppData\Roaming\npm-cache\registry.npmjs.org\wait.for\.cache.json
+39 verbose correctMkdir C:\Users\Antu dell\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+40 silly addNameRange number 2 { name: 'wait.for', range: '>=0.6.6 <0.7.0', hasData: true }
+41 silly addNameRange versions [ 'wait.for',
+41 silly addNameRange   [ '0.6.0', '0.6.1', '0.6.2', '0.6.3', '0.6.4', '0.6.6' ] ]
+42 silly addNamed wait.for@0.6.6
+43 verbose addNamed "0.6.6" is a plain semver version for wait.for
+44 silly mapToRegistry name wait.for
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry data Result {
+47 silly mapToRegistry   raw: 'wait.for',
+47 silly mapToRegistry   scope: null,
+47 silly mapToRegistry   name: 'wait.for',
+47 silly mapToRegistry   rawSpec: '',
+47 silly mapToRegistry   spec: 'latest',
+47 silly mapToRegistry   type: 'tag' }
+48 silly mapToRegistry uri https://registry.npmjs.org/wait.for
+49 verbose addRemoteTarball https://registry.npmjs.org/wait.for/-/wait.for-0.6.6.tgz not in flight; adding
+50 verbose addRemoteTarball [ 'https://registry.npmjs.org/wait.for/-/wait.for-0.6.6.tgz',
+50 verbose addRemoteTarball   '0cc9079ce0680a80545e2ec9bb7a693a16e07504' ]
+51 info retry fetch attempt 1 at 4:56:26 AM
+52 info attempt registry request try #1 at 4:56:26 AM
+53 http fetch GET https://registry.npmjs.org/wait.for/-/wait.for-0.6.6.tgz
+54 http fetch 200 https://registry.npmjs.org/wait.for/-/wait.for-0.6.6.tgz
+55 silly fetchAndShaCheck shasum 0cc9079ce0680a80545e2ec9bb7a693a16e07504
+56 verbose addTmpTarball C:\Users\ANTUDE~1\AppData\Local\Temp\npm-17052-2db74f71\registry.npmjs.org\wait.for\-\wait.for-0.6.6.tgz not in flight; adding
+57 verbose addTmpTarball already have metadata; skipping unpack for wait.for@0.6.6
+58 verbose correctMkdir C:\Users\Antu dell\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+59 silly cache afterAdd wait.for@0.6.6
+60 verbose afterAdd C:\Users\Antu dell\AppData\Roaming\npm-cache\wait.for\0.6.6\package\package.json not in flight; writing
+61 verbose correctMkdir C:\Users\Antu dell\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+62 verbose afterAdd C:\Users\Antu dell\AppData\Roaming\npm-cache\wait.for\0.6.6\package\package.json written
+63 silly install resolved [ { name: 'wait.for',
+63 silly install resolved     version: '0.6.6',
+63 silly install resolved     description: 'Sequential programming for node.js, end of callback hell',
+63 silly install resolved     author:
+63 silly install resolved      { name: 'Lucio Tato',
+63 silly install resolved        email: 'luciotato@gmail.com',
+63 silly install resolved        url: 'http://github.com/luciotato' },
+63 silly install resolved     keywords:
+63 silly install resolved      [ 'fiber',
+63 silly install resolved        'fibers',
+63 silly install resolved        'coroutine',
+63 silly install resolved        'thread',
+63 silly install resolved        'sync',
+63 silly install resolved        'async',
+63 silly install resolved        'parallel',
+63 silly install resolved        'worker',
+63 silly install resolved        'future',
+63 silly install resolved        'promise',
+63 silly install resolved        'wait',
+63 silly install resolved        'Wait.for',
+63 silly install resolved        'callback hell',
+63 silly install resolved        'pyramid of doom' ],
+63 silly install resolved     homepage: 'http://github.com/luciotato/waitfor',
+63 silly install resolved     license: 'Creative Commons, MIT',
+63 silly install resolved     bugs: { url: 'http://github.com/luciotato/waitfor/issues' },
+63 silly install resolved     repository: { type: 'git', url: 'git://github.com/luciotato/waitfor.git' },
+63 silly install resolved     main: 'waitfor.js',
+63 silly install resolved     engines: { node: '>=0.5.2' },
+63 silly install resolved     dependencies: { fibers: '>=1.0.1' },
+63 silly install resolved     scripts: { test: 'node tests' },
+63 silly install resolved     _id: 'wait.for@0.6.6',
+63 silly install resolved     _shasum: '0cc9079ce0680a80545e2ec9bb7a693a16e07504',
+63 silly install resolved     _from: 'wait.for@>=0.6.6 <0.7.0',
+63 silly install resolved     _npmVersion: '1.4.9',
+63 silly install resolved     _npmUser: { name: 'luciotato', email: 'luciotato@gmail.com' },
+63 silly install resolved     maintainers: [ [Object] ],
+63 silly install resolved     dist:
+63 silly install resolved      { shasum: '0cc9079ce0680a80545e2ec9bb7a693a16e07504',
+63 silly install resolved        tarball: 'https://registry.npmjs.org/wait.for/-/wait.for-0.6.6.tgz' },
+63 silly install resolved     directories: {},
+63 silly install resolved     _resolved: 'https://registry.npmjs.org/wait.for/-/wait.for-0.6.6.tgz' } ]
+64 info install wait.for@0.6.6 into C:\Users\Antu dell\Desktop\node js project
+65 info installOne wait.for@0.6.6
+66 verbose installOne of wait.for to C:\Users\Antu dell\Desktop\node js project not in flight; installing
+67 verbose correctMkdir C:\Users\Antu dell\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+68 verbose lock using C:\Users\Antu dell\AppData\Roaming\npm-cache\_locks\wait-for-b579071543b8d15f.lock for C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for
+69 silly install write writing wait.for 0.6.6 to C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for
+70 verbose unbuild node_modules\wait.for
+71 silly gentlyRm C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for is being purged from base C:\Users\Antu dell\Desktop\node js project
+72 verbose gentlyRm don't care about contents; nuking C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for
+73 verbose tar unpack C:\Users\Antu dell\AppData\Roaming\npm-cache\wait.for\0.6.6\package.tgz
+74 verbose tar unpacking to C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for
+75 silly gentlyRm C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for is being purged
+76 verbose gentlyRm don't care about contents; nuking C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for
+77 silly gunzTarPerm modes [ '777', '666' ]
+78 silly gunzTarPerm extractEntry package.json
+79 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+80 silly gunzTarPerm extractEntry .npmignore
+81 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+82 silly gunzTarPerm extractEntry README.md
+83 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+84 silly gunzTarPerm extractEntry LICENSE
+85 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+86 silly gunzTarPerm extractEntry waitfor-demo.js
+87 silly gunzTarPerm modified mode [ 'waitfor-demo.js', 420, 438 ]
+88 silly gunzTarPerm extractEntry tests.js
+89 silly gunzTarPerm modified mode [ 'tests.js', 420, 438 ]
+90 silly gunzTarPerm extractEntry parallel-tests.js
+91 silly gunzTarPerm modified mode [ 'parallel-tests.js', 420, 438 ]
+92 silly gunzTarPerm extractEntry waitfor.js
+93 silly gunzTarPerm modified mode [ 'waitfor.js', 420, 438 ]
+94 silly gunzTarPerm extractEntry examples/multiple-fibers-on-ReadStream-data.js
+95 silly gunzTarPerm modified mode [ 'examples/multiple-fibers-on-ReadStream-data.js', 420, 438 ]
+96 silly gunzTarPerm extractEntry bin/node
+97 silly gunzTarPerm modified mode [ 'bin/node', 493, 511 ]
+98 verbose write writing to C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\package.json
+99 info preinstall wait.for@0.6.6
+100 verbose readDependencies loading dependencies from C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\package.json
+101 silly prepareForInstallMany adding fibers@>=1.0.1 from wait.for dependencies
+102 verbose readDependencies loading dependencies from C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\package.json
+103 silly cache add args [ 'fibers@>=1.0.1', null ]
+104 verbose cache add spec fibers@>=1.0.1
+105 silly cache add parsed spec Result {
+105 silly cache add   raw: 'fibers@>=1.0.1',
+105 silly cache add   scope: null,
+105 silly cache add   name: 'fibers',
+105 silly cache add   rawSpec: '>=1.0.1',
+105 silly cache add   spec: '>=1.0.1',
+105 silly cache add   type: 'range' }
+106 silly addNamed fibers@>=1.0.1
+107 verbose addNamed ">=1.0.1" is a valid semver range for fibers
+108 silly addNameRange { name: 'fibers', range: '>=1.0.1', hasData: false }
+109 silly mapToRegistry name fibers
+110 silly mapToRegistry using default registry
+111 silly mapToRegistry registry https://registry.npmjs.org/
+112 silly mapToRegistry data Result {
+112 silly mapToRegistry   raw: 'fibers',
+112 silly mapToRegistry   scope: null,
+112 silly mapToRegistry   name: 'fibers',
+112 silly mapToRegistry   rawSpec: '',
+112 silly mapToRegistry   spec: 'latest',
+112 silly mapToRegistry   type: 'tag' }
+113 silly mapToRegistry uri https://registry.npmjs.org/fibers
+114 verbose addNameRange registry:https://registry.npmjs.org/fibers not in flight; fetching
+115 verbose request uri https://registry.npmjs.org/fibers
+116 verbose request no auth needed
+117 info attempt registry request try #1 at 4:56:29 AM
+118 http request GET https://registry.npmjs.org/fibers
+119 http 200 https://registry.npmjs.org/fibers
+120 verbose headers { 'content-type': 'application/json; charset=UTF-8',
+120 verbose headers   server: 'UploadServer',
+120 verbose headers   'cache-control': 'max-age=300',
+120 verbose headers   'last-modified': 'Tue, 19 Dec 2017 19:34:09 GMT',
+120 verbose headers   etag: '"5a3969b1-104a2"',
+120 verbose headers   'content-encoding': 'gzip',
+120 verbose headers   'content-length': '11930',
+120 verbose headers   'accept-ranges': 'bytes',
+120 verbose headers   date: 'Fri, 22 Dec 2017 22:56:30 GMT',
+120 verbose headers   via: '1.1 varnish',
+120 verbose headers   age: '9623',
+120 verbose headers   connection: 'keep-alive',
+120 verbose headers   'x-served-by': 'cache-lcy19249-LCY',
+120 verbose headers   'x-cache': 'HIT',
+120 verbose headers   'x-cache-hits': '1',
+120 verbose headers   'x-timer': 'S1513983390.319043,VS0,VE0',
+120 verbose headers   vary: 'Accept-Encoding, Accept' }
+121 silly get cb [ 200,
+121 silly get   { 'content-type': 'application/json; charset=UTF-8',
+121 silly get     server: 'UploadServer',
+121 silly get     'cache-control': 'max-age=300',
+121 silly get     'last-modified': 'Tue, 19 Dec 2017 19:34:09 GMT',
+121 silly get     etag: '"5a3969b1-104a2"',
+121 silly get     'content-encoding': 'gzip',
+121 silly get     'content-length': '11930',
+121 silly get     'accept-ranges': 'bytes',
+121 silly get     date: 'Fri, 22 Dec 2017 22:56:30 GMT',
+121 silly get     via: '1.1 varnish',
+121 silly get     age: '9623',
+121 silly get     connection: 'keep-alive',
+121 silly get     'x-served-by': 'cache-lcy19249-LCY',
+121 silly get     'x-cache': 'HIT',
+121 silly get     'x-cache-hits': '1',
+121 silly get     'x-timer': 'S1513983390.319043,VS0,VE0',
+121 silly get     vary: 'Accept-Encoding, Accept' } ]
+122 verbose get saving fibers to C:\Users\Antu dell\AppData\Roaming\npm-cache\registry.npmjs.org\fibers\.cache.json
+123 verbose correctMkdir C:\Users\Antu dell\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+124 silly addNameRange number 2 { name: 'fibers', range: '>=1.0.1', hasData: true }
+125 silly addNameRange versions [ 'fibers',
+125 silly addNameRange   [ '0.1.0',
+125 silly addNameRange     '0.1.1',
+125 silly addNameRange     '0.1.2',
+125 silly addNameRange     '0.1.3',
+125 silly addNameRange     '0.1.4',
+125 silly addNameRange     '0.1.6',
+125 silly addNameRange     '0.1.7',
+125 silly addNameRange     '0.1.8',
+125 silly addNameRange     '0.2.0',
+125 silly addNameRange     '0.2.1',
+125 silly addNameRange     '0.2.2',
+125 silly addNameRange     '0.2.3',
+125 silly addNameRange     '0.2.4',
+125 silly addNameRange     '0.2.5',
+125 silly addNameRange     '0.2.6',
+125 silly addNameRange     '0.5.0',
+125 silly addNameRange     '0.6.0',
+125 silly addNameRange     '0.5.1',
+125 silly addNameRange     '0.6.1',
+125 silly addNameRange     '0.6.2',
+125 silly addNameRange     '0.6.3',
+125 silly addNameRange     '0.6.4',
+125 silly addNameRange     '0.6.5',
+125 silly addNameRange     '0.6.6',
+125 silly addNameRange     '0.6.7',
+125 silly addNameRange     '0.6.8',
+125 silly addNameRange     '0.6.9',
+125 silly addNameRange     '1.0.0',
+125 silly addNameRange     '1.0.1',
+125 silly addNameRange     '1.0.2',
+125 silly addNameRange     '1.0.4',
+125 silly addNameRange     '1.0.5',
+125 silly addNameRange     '1.0.6-b',
+125 silly addNameRange     '1.0.7',
+125 silly addNameRange     '1.0.8',
+125 silly addNameRange     '1.0.9',
+125 silly addNameRange     '1.0.10',
+125 silly addNameRange     '1.0.11',
+125 silly addNameRange     '1.0.12',
+125 silly addNameRange     '1.0.13',
+125 silly addNameRange     '1.0.14',
+125 silly addNameRange     '1.0.15',
+125 silly addNameRange     '2.0.0' ] ]
+126 silly addNamed fibers@2.0.0
+127 verbose addNamed "2.0.0" is a plain semver version for fibers
+128 silly mapToRegistry name fibers
+129 silly mapToRegistry using default registry
+130 silly mapToRegistry registry https://registry.npmjs.org/
+131 silly mapToRegistry data Result {
+131 silly mapToRegistry   raw: 'fibers',
+131 silly mapToRegistry   scope: null,
+131 silly mapToRegistry   name: 'fibers',
+131 silly mapToRegistry   rawSpec: '',
+131 silly mapToRegistry   spec: 'latest',
+131 silly mapToRegistry   type: 'tag' }
+132 silly mapToRegistry uri https://registry.npmjs.org/fibers
+133 verbose addRemoteTarball https://registry.npmjs.org/fibers/-/fibers-2.0.0.tgz not in flight; adding
+134 verbose addRemoteTarball [ 'https://registry.npmjs.org/fibers/-/fibers-2.0.0.tgz',
+134 verbose addRemoteTarball   'f26d0aaf1f99995fbe1cb3f340efac08bda9dc4b' ]
+135 info retry fetch attempt 1 at 4:56:29 AM
+136 info attempt registry request try #1 at 4:56:29 AM
+137 http fetch GET https://registry.npmjs.org/fibers/-/fibers-2.0.0.tgz
+138 http fetch 200 https://registry.npmjs.org/fibers/-/fibers-2.0.0.tgz
+139 silly fetchAndShaCheck shasum f26d0aaf1f99995fbe1cb3f340efac08bda9dc4b
+140 verbose addTmpTarball C:\Users\ANTUDE~1\AppData\Local\Temp\npm-17052-2db74f71\registry.npmjs.org\fibers\-\fibers-2.0.0.tgz not in flight; adding
+141 verbose addTmpTarball already have metadata; skipping unpack for fibers@2.0.0
+142 verbose correctMkdir C:\Users\Antu dell\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+143 silly cache afterAdd fibers@2.0.0
+144 verbose afterAdd C:\Users\Antu dell\AppData\Roaming\npm-cache\fibers\2.0.0\package\package.json not in flight; writing
+145 verbose correctMkdir C:\Users\Antu dell\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+146 verbose afterAdd C:\Users\Antu dell\AppData\Roaming\npm-cache\fibers\2.0.0\package\package.json written
+147 silly install resolved [ { name: 'fibers',
+147 silly install resolved     version: '2.0.0',
+147 silly install resolved     description: 'Cooperative multi-tasking for Javascript',
+147 silly install resolved     keywords:
+147 silly install resolved      [ 'fiber',
+147 silly install resolved        'fibers',
+147 silly install resolved        'coroutine',
+147 silly install resolved        'thread',
+147 silly install resolved        'async',
+147 silly install resolved        'parallel',
+147 silly install resolved        'worker',
+147 silly install resolved        'future',
+147 silly install resolved        'promise' ],
+147 silly install resolved     homepage: 'https://github.com/laverdet/node-fibers',
+147 silly install resolved     author:
+147 silly install resolved      { name: 'Marcel Laverdet',
+147 silly install resolved        email: 'marcel@laverdet.com',
+147 silly install resolved        url: 'https://github.com/laverdet/' },
+147 silly install resolved     main: 'fibers',
+147 silly install resolved     scripts:
+147 silly install resolved      { install: 'node build.js || nodejs build.js',
+147 silly install resolved        test: 'node test.js || nodejs test.js' },
+147 silly install resolved     repository:
+147 silly install resolved      { type: 'git',
+147 silly install resolved        url: 'git://github.com/laverdet/node-fibers.git' },
+147 silly install resolved     license: 'MIT',
+147 silly install resolved     engines: { node: '>=0.5.2' },
+147 silly install resolved     bugs: { url: 'https://github.com/laverdet/node-fibers/issues' },
+147 silly install resolved     _id: 'fibers@2.0.0',
+147 silly install resolved     _npmVersion: '5.0.0',
+147 silly install resolved     _nodeVersion: '8.0.0',
+147 silly install resolved     _npmUser: { name: 'laverdet', email: 'marcel.npm@laverdet.com' },
+147 silly install resolved     dist:
+147 silly install resolved      { integrity: 'sha512-sLxo4rZVk7xLgAjb/6zEzHJfSALx6u6coN1z61XCOF7i6CyTdJawF4+RdpjCSeS8AP66eR2InScbYAz9RAVOgA==',
+147 silly install resolved        shasum: 'f26d0aaf1f99995fbe1cb3f340efac08bda9dc4b',
+147 silly install resolved        tarball: 'https://registry.npmjs.org/fibers/-/fibers-2.0.0.tgz' },
+147 silly install resolved     maintainers: [ [Object] ],
+147 silly install resolved     _npmOperationalInternal:
+147 silly install resolved      { host: 's3://npm-registry-packages',
+147 silly install resolved        tmp: 'tmp/fibers-2.0.0.tgz_1496688401588_0.38031439599581063' },
+147 silly install resolved     directories: {},
+147 silly install resolved     _shasum: 'f26d0aaf1f99995fbe1cb3f340efac08bda9dc4b',
+147 silly install resolved     _resolved: 'https://registry.npmjs.org/fibers/-/fibers-2.0.0.tgz',
+147 silly install resolved     _from: 'fibers@>=1.0.1' } ]
+148 info install fibers@2.0.0 into C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for
+149 info installOne fibers@2.0.0
+150 verbose installOne of fibers to C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for not in flight; installing
+151 verbose correctMkdir C:\Users\Antu dell\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+152 verbose lock using C:\Users\Antu dell\AppData\Roaming\npm-cache\_locks\fibers-032b13bac17db581.lock for C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers
+153 silly install write writing fibers 2.0.0 to C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers
+154 verbose unbuild node_modules\wait.for\node_modules\fibers
+155 silly gentlyRm C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers is being purged from base C:\Users\Antu dell\Desktop\node js project
+156 verbose gentlyRm don't care about contents; nuking C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers
+157 verbose tar unpack C:\Users\Antu dell\AppData\Roaming\npm-cache\fibers\2.0.0\package.tgz
+158 verbose tar unpacking to C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers
+159 silly gentlyRm C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers is being purged
+160 verbose gentlyRm don't care about contents; nuking C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers
+161 silly gunzTarPerm modes [ '777', '666' ]
+162 silly gunzTarPerm extractEntry package.json
+163 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+164 silly gunzTarPerm extractEntry .npmignore
+165 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+166 silly gunzTarPerm extractEntry README.md
+167 silly gunzTarPerm modified mode [ 'README.md', 420, 438 ]
+168 silly gunzTarPerm extractEntry LICENSE
+169 silly gunzTarPerm modified mode [ 'LICENSE', 420, 438 ]
+170 silly gunzTarPerm extractEntry quick-test.js
+171 silly gunzTarPerm modified mode [ 'quick-test.js', 420, 438 ]
+172 silly gunzTarPerm extractEntry build.js
+173 silly gunzTarPerm modified mode [ 'build.js', 493, 511 ]
+174 silly gunzTarPerm extractEntry future.js
+175 silly gunzTarPerm modified mode [ 'future.js', 420, 438 ]
+176 silly gunzTarPerm extractEntry test.js
+177 silly gunzTarPerm modified mode [ 'test.js', 493, 511 ]
+178 silly gunzTarPerm extractEntry fibers.js
+179 silly gunzTarPerm modified mode [ 'fibers.js', 420, 438 ]
+180 silly gunzTarPerm extractEntry .travis.yml
+181 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+182 silly gunzTarPerm extractEntry binding.gyp
+183 silly gunzTarPerm modified mode [ 'binding.gyp', 420, 438 ]
+184 silly gunzTarPerm extractEntry bin/.npmignore
+185 silly gunzTarPerm modified mode [ 'bin/.npmignore', 420, 438 ]
+186 silly gunzTarPerm extractEntry bin/win32-x64-57/fibers.node
+187 silly gunzTarPerm modified mode [ 'bin/win32-x64-57/fibers.node', 493, 511 ]
+188 silly gunzTarPerm extractEntry bin/darwin-ia32-57/fibers.node
+189 silly gunzTarPerm modified mode [ 'bin/darwin-ia32-57/fibers.node', 493, 511 ]
+190 silly gunzTarPerm extractEntry bin/darwin-x64-48/fibers.node
+191 silly gunzTarPerm modified mode [ 'bin/darwin-x64-48/fibers.node', 493, 511 ]
+192 silly gunzTarPerm extractEntry bin/darwin-x64-57/fibers.node
+193 silly gunzTarPerm modified mode [ 'bin/darwin-x64-57/fibers.node', 493, 511 ]
+194 silly gunzTarPerm extractEntry bin/linux-ia32-48/fibers.node
+195 silly gunzTarPerm modified mode [ 'bin/linux-ia32-48/fibers.node', 493, 511 ]
+196 silly gunzTarPerm extractEntry bin/linux-ia32-57/fibers.node
+197 silly gunzTarPerm modified mode [ 'bin/linux-ia32-57/fibers.node', 493, 511 ]
+198 silly gunzTarPerm extractEntry bin/darwin-ia32-48/fibers.node
+199 silly gunzTarPerm modified mode [ 'bin/darwin-ia32-48/fibers.node', 493, 511 ]
+200 silly gunzTarPerm extractEntry bin/linux-x64-57/fibers.node
+201 silly gunzTarPerm modified mode [ 'bin/linux-x64-57/fibers.node', 493, 511 ]
+202 silly gunzTarPerm extractEntry bin/repl
+203 silly gunzTarPerm modified mode [ 'bin/repl', 493, 511 ]
+204 silly gunzTarPerm extractEntry bin/win32-ia32-48/fibers.node
+205 silly gunzTarPerm modified mode [ 'bin/win32-ia32-48/fibers.node', 420, 438 ]
+206 silly gunzTarPerm extractEntry bin/win32-ia32-57/fibers.node
+207 silly gunzTarPerm modified mode [ 'bin/win32-ia32-57/fibers.node', 493, 511 ]
+208 silly gunzTarPerm extractEntry bin/win32-x64-48/fibers.node
+209 silly gunzTarPerm modified mode [ 'bin/win32-x64-48/fibers.node', 420, 438 ]
+210 silly gunzTarPerm extractEntry bin/linux-x64-48/fibers.node
+211 silly gunzTarPerm modified mode [ 'bin/linux-x64-48/fibers.node', 493, 511 ]
+212 silly gunzTarPerm extractEntry src/coroutine.cc
+213 silly gunzTarPerm modified mode [ 'src/coroutine.cc', 420, 438 ]
+214 silly gunzTarPerm extractEntry src/coroutine.h
+215 silly gunzTarPerm modified mode [ 'src/coroutine.h', 420, 438 ]
+216 silly gunzTarPerm extractEntry src/fibers.cc
+217 silly gunzTarPerm modified mode [ 'src/fibers.cc', 420, 438 ]
+218 silly gunzTarPerm extractEntry src/libcoro/README
+219 silly gunzTarPerm modified mode [ 'src/libcoro/README', 420, 438 ]
+220 silly gunzTarPerm extractEntry src/libcoro/LICENSE
+221 silly gunzTarPerm modified mode [ 'src/libcoro/LICENSE', 420, 438 ]
+222 silly gunzTarPerm extractEntry src/libcoro/conftest.c
+223 silly gunzTarPerm modified mode [ 'src/libcoro/conftest.c', 420, 438 ]
+224 silly gunzTarPerm extractEntry src/libcoro/coro.c
+225 silly gunzTarPerm modified mode [ 'src/libcoro/coro.c', 420, 438 ]
+226 silly gunzTarPerm extractEntry src/libcoro/coro.h
+227 silly gunzTarPerm modified mode [ 'src/libcoro/coro.h', 420, 438 ]
+228 silly gunzTarPerm extractEntry src/v8-version.h
+229 silly gunzTarPerm modified mode [ 'src/v8-version.h', 420, 438 ]
+230 silly gunzTarPerm extractEntry test/already-running.js
+231 silly gunzTarPerm modified mode [ 'test/already-running.js', 420, 438 ]
+232 silly gunzTarPerm extractEntry test/exit.js
+233 silly gunzTarPerm modified mode [ 'test/exit.js', 420, 438 ]
+234 silly gunzTarPerm extractEntry test/fibonacci.js
+235 silly gunzTarPerm modified mode [ 'test/fibonacci.js', 420, 438 ]
+236 silly gunzTarPerm extractEntry test/finish-multiple.js
+237 silly gunzTarPerm modified mode [ 'test/finish-multiple.js', 420, 438 ]
+238 silly gunzTarPerm extractEntry test/exec.js
+239 silly gunzTarPerm modified mode [ 'test/exec.js', 420, 438 ]
+240 silly gunzTarPerm extractEntry test/future.js
+241 silly gunzTarPerm modified mode [ 'test/future.js', 420, 438 ]
+242 silly gunzTarPerm extractEntry test/illegal-yield.js
+243 silly gunzTarPerm modified mode [ 'test/illegal-yield.js', 420, 438 ]
+244 silly gunzTarPerm extractEntry test/pool.js
+245 silly gunzTarPerm modified mode [ 'test/pool.js', 420, 438 ]
+246 silly gunzTarPerm extractEntry test/process-title.js
+247 silly gunzTarPerm modified mode [ 'test/process-title.js', 420, 438 ]
+248 silly gunzTarPerm extractEntry test/stack-overflow.js
+249 silly gunzTarPerm modified mode [ 'test/stack-overflow.js', 420, 438 ]
+250 silly gunzTarPerm extractEntry test/current.js
+251 silly gunzTarPerm modified mode [ 'test/current.js', 420, 438 ]
+252 silly gunzTarPerm extractEntry test/stack-overflow2.js
+253 silly gunzTarPerm modified mode [ 'test/stack-overflow2.js', 493, 511 ]
+254 silly gunzTarPerm extractEntry test/child-process.js
+255 silly gunzTarPerm modified mode [ 'test/child-process.js', 420, 438 ]
+256 silly gunzTarPerm extractEntry test/started.js
+257 silly gunzTarPerm modified mode [ 'test/started.js', 420, 438 ]
+258 silly gunzTarPerm extractEntry test/bad-context.js
+259 silly gunzTarPerm modified mode [ 'test/bad-context.js', 420, 438 ]
+260 silly gunzTarPerm extractEntry test/unwind.js
+261 silly gunzTarPerm modified mode [ 'test/unwind.js', 420, 438 ]
+262 silly gunzTarPerm extractEntry test/future-exception.js
+263 silly gunzTarPerm modified mode [ 'test/future-exception.js', 420, 438 ]
+264 verbose write writing to C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers\package.json
+265 info preinstall fibers@2.0.0
+266 verbose readDependencies loading dependencies from C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers\package.json
+267 verbose readDependencies loading dependencies from C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers\package.json
+268 silly install resolved []
+269 verbose about to build C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers
+270 info build C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers
+271 info linkStuff fibers@2.0.0
+272 silly linkStuff fibers@2.0.0 has C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules as its parent node_modules
+273 verbose linkBins fibers@2.0.0
+274 verbose linkMans fibers@2.0.0
+275 verbose rebuildBundles fibers@2.0.0
+276 info install fibers@2.0.0
+277 verbose unsafe-perm in lifecycle true
+278 info fibers@2.0.0 Failed to exec install script
+279 verbose unlock done using C:\Users\Antu dell\AppData\Roaming\npm-cache\_locks\fibers-032b13bac17db581.lock for C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers
+280 verbose about to build C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for
+281 verbose unlock done using C:\Users\Antu dell\AppData\Roaming\npm-cache\_locks\wait-for-b579071543b8d15f.lock for C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for
+282 verbose stack Error: fibers@2.0.0 install: `node build.js || nodejs build.js`
+282 verbose stack Exit status 1
+282 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:217:16)
+282 verbose stack     at emitTwo (events.js:87:13)
+282 verbose stack     at EventEmitter.emit (events.js:172:7)
+282 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+282 verbose stack     at emitTwo (events.js:87:13)
+282 verbose stack     at ChildProcess.emit (events.js:172:7)
+282 verbose stack     at maybeClose (internal/child_process.js:862:16)
+282 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:222:5)
+283 verbose pkgid fibers@2.0.0
+284 verbose cwd C:\Users\Antu dell\Desktop\node js project
+285 error Windows_NT 10.0.15063
+286 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "i" "wait.for" "--save"
+287 error node v4.8.4
+288 error npm  v2.15.11
+289 error code ELIFECYCLE
+290 error fibers@2.0.0 install: `node build.js || nodejs build.js`
+290 error Exit status 1
+291 error Failed at the fibers@2.0.0 install script 'node build.js || nodejs build.js'.
+291 error This is most likely a problem with the fibers package,
+291 error not with npm itself.
+291 error Tell the author that this fails on your system:
+291 error     node build.js || nodejs build.js
+291 error You can get information on how to open an issue for this project with:
+291 error     npm bugs fibers
+291 error Or if that isn't available, you can get their info via:
+291 error
+291 error     npm owner ls fibers
+291 error There is likely additional logging output above.
+292 verbose exit [ 1, true ]
+293 verbose unbuild node_modules\wait.for\node_modules\fibers
+294 info preuninstall fibers@2.0.0
+295 info uninstall fibers@2.0.0
+296 verbose unbuild rmStuff fibers@2.0.0 from C:\Users\Antu dell\Desktop\node js project\node_modules
+297 verbose unbuild rmStuff in C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules
+298 info postuninstall fibers@2.0.0
+299 silly gentlyRm C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers is being purged from base C:\Users\Antu dell\Desktop\node js project
+300 verbose gentlyRm don't care about contents; nuking C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers
+301 silly vacuum-fs purging C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules\fibers
+302 silly vacuum-fs removing C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for\node_modules
+303 silly vacuum-fs quitting because other entries in C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for
+304 verbose unbuild node_modules\wait.for
+305 info preuninstall wait.for@0.6.6
+306 info uninstall wait.for@0.6.6
+307 verbose unbuild rmStuff wait.for@0.6.6 from C:\Users\Antu dell\Desktop\node js project\node_modules
+308 info postuninstall wait.for@0.6.6
+309 silly gentlyRm C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for is being purged from base C:\Users\Antu dell\Desktop\node js project
+310 verbose gentlyRm don't care about contents; nuking C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for
+311 silly vacuum-fs purging C:\Users\Antu dell\Desktop\node js project\node_modules\wait.for
+312 silly vacuum-fs quitting because other entries in C:\Users\Antu dell\Desktop\node js project\node_modules
