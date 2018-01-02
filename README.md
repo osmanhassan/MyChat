@@ -9,7 +9,7 @@ Download the latest version of node. Install the downloaded one.
 Download the zip and extract the zip file into a folder or clone the repository. Open command prompt on that folder.
 write the command "npm install". This command will download all the dependencies. Make sure you are connected with internet. 
 
-Make a database named node_chat_db. Import the node_chat_db.sql file on that database.
+Create a database named node_chat_db in PHPmyadmin. Import the node_chat_db.sql file on that database.
 
 In the command prompt write the command  node app.js
 
