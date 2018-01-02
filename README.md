@@ -11,7 +11,7 @@ write the command "npm install". This command will download all the dependencies
 
 Create a database named node_chat_db in PHPmyadmin. Import the node_chat_db.sql file on that database.
 
-In the command prompt write the command  node app.js
+In the command prompt write the command  node app.js.
 
 Open your browser, write the url 'localhost' and press enter.
 
