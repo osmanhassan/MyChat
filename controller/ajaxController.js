@@ -41,41 +41,48 @@ router.post("/image", function(req, res){
     form.parse(req, function (err, fields, files) {
     	var buffer = readChunk.sync(files.pic.path, 0, 4100);
 	    var extension = fileType(buffer);
-	    var mime = extension.mime.split("/");
-	    mime = mime[0];
-	    if(mime === 'image'){
-	    	
-	    	//console.log(extension);
-	    	var extension = extension.ext;
 
-			var oldpath = files.pic.path;
-			var newpath = './public/images/uploads/user/' + uid +'.'+extension;
+	    if(extension != null){
+		    var mime = extension.mime.split("/");
+		    mime = mime[0];
+		    console.log(extension.mime);
+		    if(mime === 'image'){
+		    	
+		    	//console.log(extension);
+		    	var extension = extension.ext;
 
-			fs.rename(oldpath, newpath, function (err) {
+				var oldpath = files.pic.path;
+				var newpath = './public/images/uploads/user/' + uid +'.'+extension;
 
-				if (err) 
-					console.log(err);
-				var timeStamp = Math.floor(Date.now());
-				var path = '/images/uploads/user/' + uid +'.'+extension;
-				
-				req.session.user.image = path;
-				
-				var data= req.session.user;
-				
-				user.updateUser(data, function(flag){
+				fs.rename(oldpath, newpath, function (err) {
 
-					if(flag){
-						res.send(path + '?nocache=<' + timeStamp);
-					}
-					else
-						console.log('Could not insert image in DB!');
+					if (err) 
+						console.log(err);
+					var timeStamp = Math.floor(Date.now());
+					var path = '/images/uploads/user/' + uid +'.'+extension;
+					
+					req.session.user.image = path;
+					
+					var data= req.session.user;
+					
+					user.updateUser(data, function(flag){
+
+						if(flag){
+							res.send(path + '?nocache=<' + timeStamp);
+						}
+						else
+							console.log('Could not insert image in DB!');
+					});
+					
+					    //res.end();
 				});
-				
-				    //res.end();
-			});
+			}
+			else{
+				console.log('Bad file upload try!');
+			}
 		}
 		else{
-			console.log('Bad file upload try!');
+			console.log('vulnerable file upload try!');
 		}
   	});
 });
@@ -476,65 +483,71 @@ router.post("/sendchatfile", function(req, res){
     	var receiverName = fields.receiverName;
     	var buffer = readChunk.sync(files.pic.path, 0, 4100);
 	    var extension = fileType(buffer);
-	    var mime = extension.mime.split("/");
-	    mime = mime[0];
-	    if(mime === 'image'){
-	    	
-	    	//console.log(extension);
-	    	var extension = extension.ext;
+	    if(extension != null){
+		    var mime = extension.mime.split("/");
+		    mime = mime[0];
+		    if(mime === 'image'){
+		    	
+		    	//console.log(extension);
+		    	var extension = extension.ext;
 
-			var oldpath = files.pic.path;
-			var newpath = './public/images/uploads/message/' + senderName + receiverName + timeStamp + '.' + extension;
+				var oldpath = files.pic.path;
+				var newpath = './public/images/uploads/message/' + senderName + receiverName + timeStamp + '.' + extension;
 
-			fs.rename(oldpath, newpath, function (err) {
+				fs.rename(oldpath, newpath, function (err) {
 
-				if (err) 
-					console.log(err);
-				//var timeStamp = Math.floor(Date.now());
-				var path = '/images/uploads/message/' + senderName + receiverName + timeStamp + '.' + extension;
-				
-				
-				
-				var params = {
-					sender: uid,
-					receiver: receiver,
-					chat: path,
-					type: 'file/image',
-					status: 'unseen'
-				};
-	
-				message.insert(params, function(id){
+					if (err) 
+						console.log(err);
+					//var timeStamp = Math.floor(Date.now());
+					var path = '/images/uploads/message/' + senderName + receiverName + timeStamp + '.' + extension;
+					
+					
+					
+					var params = {
+						sender: uid,
+						receiver: receiver,
+						chat: path,
+						type: 'file/image',
+						status: 'unseen'
+					};
+		
+					message.insert(params, function(id){
 
-					if(id){
-						var src = path + '?nocache=<' + timeStamp;
-						var response = '<div class ="mybox" id="mb' + id + '"><img src="' + src + '" class="senderimage"><span class="deletebtnr" id="' + id + '" name="delete">DELETE</span></div>';
+						if(id){
+							var src = path + '?nocache=<' + timeStamp;
+							var response = '<div class ="mybox" id="mb' + id + '"><img src="' + src + '" class="senderimage"><span class="deletebtnr" id="' + id + '" name="delete">DELETE</span></div>';
 
-						var name = req.session.user.name;
-						var description = name + ' sent you photo.';
-						params ={
-									notifier: uid,
-									notifible: receiver,
-									type: 'message/image',
-									description: description
-								};
-						
-						notification.insert(params, function(flag1){	
-							res.send(response);
-						});	
-						
-					}
-					else{
-						console.log('Could not insert image in DB!');
-						res.send('');
-					}
+							var name = req.session.user.name;
+							var description = name + ' sent you photo.';
+							params ={
+										notifier: uid,
+										notifible: receiver,
+										type: 'message/image',
+										description: description
+									};
+							
+							notification.insert(params, function(flag1){	
+								res.send(response);
+							});	
+							
+						}
+						else{
+							console.log('Could not insert image in DB!');
+							res.send('');
+						}
+					});
+					
+					
+					    //res.end();
 				});
-				
-				
-				    //res.end();
-			});
+			}
+			else{
+				console.log('Bad file upload try!');
+				res.send('');
+			}
 		}
 		else{
-			console.log('Bad file upload try!');
+			console.log('Vulnerable file upload try!');
 			res.send('');
 		}
   	});
